@@ -1,0 +1,33 @@
+RewriteEngine on
+
+
+#************ auto loader ************#
+# Loads the autoloader script before executing main PHP file 
+
+#for centos 
+#php_value auto_prepend_file /var/www/html/public_html/includes/autoprepend.php
+
+#for xampp windows
+#php_value auto_prepend_file /XAMPP/htdocs/tvtrope/Q/includes/autoprepend.php
+
+#*************************************#
+
+RewriteRule ^home/?$ home.php [L,QSA]
+ 
+
+#php_flag display_startup_errors off
+#php_flag display_errors off
+#php_flag html_errors off
+
+
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+
+php_value max_input_vars 3000
+
+
+#RewriteRule ^/([a-zA-Z0-9]+)$  /Q/index.php?name=$1
+
+
+
